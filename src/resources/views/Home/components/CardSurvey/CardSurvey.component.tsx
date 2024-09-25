@@ -9,7 +9,12 @@ export function CardSurvey(card: ICardSurveyProps): JSX.Element {
     <div className='border rounded-sm h-[180px] flex justify-between w-full shadow-xl'>
       <div className='p-3 flex flex-col justify-between'>
         <div className='flex flex-col'>
-          <h1 className='font-bold text-2xl'>{card.title}</h1>
+          <h1
+            className='font-bold text-2xl max-w-[158px] truncate'
+            title={card.title}
+          >
+            {card.title}
+          </h1>
           <span>Enquete</span>
         </div>
         <span className='text-neutral-500'>Em {card.link}</span>

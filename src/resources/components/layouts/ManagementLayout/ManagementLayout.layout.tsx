@@ -24,7 +24,7 @@ export function ManagementLayout({
             FeedbackHub
           </Link>
 
-          <ul className='flex items-center text-lg font-bold gap-5'>
+          <ul className='flex items-center text-md font-bold gap-5'>
             <li className='md:block hidden'>
               <Link
                 to='/home'
@@ -54,7 +54,7 @@ export function ManagementLayout({
         </div>
 
         <div className='flex items-center'>
-          <ul className='flex items-center text-lg font-bold gap-3'>
+          <ul className='flex items-center text-md font-bold gap-3'>
             <li className='md:block hidden'>
               <Link to='/home'>Suporte</Link>
             </li>
