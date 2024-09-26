@@ -16,7 +16,7 @@ export function PlanAndPayments(): JSX.Element {
       <div className='h-full w-full flex items-center justify-center overflow-auto'>
         <div className='md:w-[1200px] h-full p-6 my-4'>
           <div className="w-full flex justify-center">
-            <div className="w-full max-w-4xl p-6">
+            <div className="w-full max-w-4xl">
               <div className="flex items-center justify-between w-full">
                 <h1 className="md:text-4xl text-3xl font-bold mb-2">Planos e pagamento</h1>
               </div>

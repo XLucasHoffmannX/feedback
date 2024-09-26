@@ -4,14 +4,16 @@ import { IoChatboxEllipsesOutline } from 'react-icons/io5';
 
 export function Plan(item: IPlanProps): JSX.Element {
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="w-full max-w-4xl p-6">
+    <div className="w-full flex items-center justify-center mt-6">
+      <div className="w-full max-w-4xl">
           <div className="bg-gray-50 rounded-sm shadow-sm p-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 justify-between">
             <div>
-              <h1 className="text-secondary text-xl font-bold">Plano</h1>
-              <div className='w-full bg-neutral-100 md:flex flex-col p-2'>
+              <h1 className="text-xl font-bold">Plano</h1>
+              <div className='w-full bg-neutral-100 p-4'>
                 <h1 className="text-primary text-xl font-bold">{ item.title }</h1>
-                <span className='text-secondary'>{ item.currency }<span className='text-xl font-extrabold'>{ item.value } </span><span className='text-neutral-300'>{ item.period }</span></span>
+                <span className='text-xl'>{ item.currency }</span>
+                <span className='text-xl font-extrabold'>{ item.value } </span>
+                <span className='text-neutral-400'>{ item.period }</span>
               </div>
               <Separator className='mt-4'/>
               <div>
@@ -25,7 +27,7 @@ export function Plan(item: IPlanProps): JSX.Element {
               </div>
             </div>
             <div className='w-full'>
-              <h1 className="text-secondary text-xl font-bold">Uso</h1>
+              <h1 className="text-xl font-bold">Uso</h1>
               <div className='text-gray-600 w-full h-full flex flex-col mt-3'>
                 <p className='flex items-center gap-2'>
                   <IoChatboxEllipsesOutline />
