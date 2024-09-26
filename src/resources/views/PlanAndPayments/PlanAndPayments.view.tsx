@@ -6,35 +6,55 @@ import { CardSubscription } from './components/CardSubscription.component';
 
 export function PlanAndPayments(): JSX.Element {
   const array: ICardPlanProps[] = [
-    { title: 'Empresa', value: '99', currency: '€', quantity: 'Ilimitado', period: 'Por mês' },
-    { title: 'Essencial', value: '15', currency: '€', quantity: '5000', period: 'Por mês' },
-    { title: 'Básico', value: 'Free', currency: '', quantity: '1000', period: '' }
+    {
+      title: 'Empresa',
+      value: '99',
+      currency: '€',
+      quantity: 'Ilimitado',
+      period: 'Por mês'
+    },
+    {
+      title: 'Essencial',
+      value: '15',
+      currency: '€',
+      quantity: '5000',
+      period: 'Por mês'
+    },
+    {
+      title: 'Básico',
+      value: 'Free',
+      currency: '',
+      quantity: '1000',
+      period: ''
+    }
   ];
 
   return (
     <ManagementLayout>
       <div className='h-full w-full flex items-center justify-center overflow-auto'>
         <div className='md:w-[1200px] h-full p-6 my-4'>
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-4xl">
-              <div className="flex items-center justify-between w-full">
-                <h1 className="md:text-4xl text-3xl font-bold mb-2">Planos e pagamento</h1>
+          <div className='w-full flex justify-center'>
+            <div className='w-full max-w-4xl'>
+              <div className='flex items-center justify-between w-full'>
+                <h1 className='md:text-4xl text-3xl font-bold mb-2'>
+                  Planos e pagamento
+                </h1>
               </div>
-              <div className="bg-gray-50 rounded-sm shadow-sm p-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+              <div className='bg-gray-50 rounded-sm shadow-sm p-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
                 {array.map((item, key) => (
                   <CardPlan
-                    title={ item.title }
-                    value={ item.value }
-                    quantity={ item.quantity }
-                    currency={ item.currency }
-                    period={ item.period }
+                    title={item.title}
+                    value={item.value}
+                    quantity={item.quantity}
+                    currency={item.currency}
+                    period={item.period}
                     key={key}
                   />
                 ))}
               </div>
             </div>
           </div>
-          
+
           <Plan
             title='Essencial'
             currency='R$'
@@ -45,17 +65,17 @@ export function PlanAndPayments(): JSX.Element {
             responses='2,175'
             total='27,561'
           />
-          <CardSubscription 
+          <CardSubscription
             title='Atualizar assinatura'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            buttonColor='bg-primary md:w-auto w-[240px] h-[45px] hover:scale-105 transition-all duration-200 gap-[8px] px-[48px] transform active:scale-90 hover:opacity-[80%]'
             buttonText='Atualizar assinatura'
+            variant='default'
           />
-          <CardSubscription 
+          <CardSubscription
             title='Cancelar assinatura'
             description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-            buttonColor='bg-red-600 md:w-auto w-[240px] h-[45px] hover:scale-105 transition-all duration-200 gap-[8px] px-[48px] transform active:scale-90 hover:opacity-[80%]'
             buttonText='Cancelar assinatura'
+            variant='destructive'
           />
         </div>
       </div>
