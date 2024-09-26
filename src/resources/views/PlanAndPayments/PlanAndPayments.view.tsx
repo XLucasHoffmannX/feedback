@@ -45,7 +45,7 @@ export function PlanAndPayments(): JSX.Element {
               </div>
               <div className='bg-gray-50 rounded-sm shadow-sm p-5 grid grid-cols-1 gap-4 lg:grid-cols-3 justify-items-center'>
                 {isMobile ? (
-                  <CarouselPlan array={array} />
+                  <CarouselPlan cardsArray={array} />
                 ) : (
                   <>
                     {array.map((item, key) => (

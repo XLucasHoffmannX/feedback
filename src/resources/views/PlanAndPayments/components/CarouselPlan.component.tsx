@@ -13,7 +13,7 @@ export function CarouselPlan(item: ICarouselPlanProps): JSX.Element {
   return (
     <Carousel className='w-full max-w-xs'>
       <CarouselContent>
-        {item.array.map((item: ICardPlanProps, key) => (
+        {item.cardsArray.map((item: ICardPlanProps, key) => (
           <CarouselItem key={key}>
             <div className='flex justify-center items-center'>
               <CardPlan
