@@ -1,7 +1,4 @@
-import { BsEmojiSmile } from 'react-icons/bs';
-import { FiChevronRight } from 'react-icons/fi';
-import { IoChatboxEllipsesOutline } from 'react-icons/io5';
-import { ICardPlanProps } from './ICardPlan.component';
+import { ICardPlanProps } from './CardPlan.types';
 import { Button } from '@/resources/components/ui';
 import { Separator } from '@radix-ui/react-menubar';
 
@@ -11,8 +8,9 @@ export function CardPlan(card: ICardPlanProps): JSX.Element {
       <div className='flex justify-between h-[140px]'>
         <div className='p-3 flex flex-col justify-between'>
           <div className='flex flex-col'>
-            <h1 className='font-bold text-2xl'>{card.title}</h1>
-            <span className='text-3xl font-bold'>{card.currency}<span className='text-4xl font-extrabold'>{card.value}</span></span>
+            <h1 className='font-bold text-2xl'>{ card.title }</h1>
+            <span className='text-3xl font-bold'>{ card.currency }<span className='text-4xl font-extrabold'>{ card.value }</span></span>
+            <span className='text-neutral-300'>{ card.period }</span>
           </div>
         </div>
       </div>
@@ -28,12 +26,12 @@ export function CardPlan(card: ICardPlanProps): JSX.Element {
       </div>
       <div className='m-3 text-sm'>
         <span className='text-neutral-300'>Respostas</span>
-        <p><strong>{card.quantity}</strong> por mês</p>
+        <p><strong>{ card.quantity }</strong> por mês</p>
         <Separator className='mt-2'/>
         <span className='text-neutral-300'>Uso</span>
-        <p><strong>Ilimitado</strong> website</p>
-        <p><strong>Ilimitado</strong> enquetes</p>
-        <p><strong>Ilimitado</strong> usários</p>
+        <p><strong>Ilimitados</strong> websites</p>
+        <p><strong>Ilimitadas</strong> enquetes</p>
+        <p><strong>Ilimitados</strong> usuários</p>
       </div>
     </div>
   );

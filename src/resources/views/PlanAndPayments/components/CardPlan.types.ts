@@ -3,6 +3,7 @@ export interface ICardPlan {
     value: string;
     currency: string;
     quantity: string;
+    period: string;
   }
   
-  export interface ICardPlanProps extends ICardPlan {}
+export interface ICardPlanProps extends ICardPlan {}
