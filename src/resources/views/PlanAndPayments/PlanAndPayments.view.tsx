@@ -3,8 +3,11 @@ import { ICardPlanProps } from './components/CardPlan.types';
 import { ManagementLayout } from '@/resources/components/layouts';
 import { Plan } from './components/Plan.component';
 import { CardSubscription } from './components/CardSubscription.component';
+import { CarouselPlan } from './components/CarouselPlan.component';
+import { useIsMobile } from '@/shared/hooks/useIsMobile';
 
 export function PlanAndPayments(): JSX.Element {
+  const isMobile: boolean = useIsMobile({ display: 1024 });
   const array: ICardPlanProps[] = [
     {
       title: 'Empresa',
@@ -40,17 +43,23 @@ export function PlanAndPayments(): JSX.Element {
                   Planos e pagamento
                 </h1>
               </div>
-              <div className='bg-gray-50 rounded-sm shadow-sm p-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 justify-items-center'>
-                {array.map((item, key) => (
-                  <CardPlan
-                    title={item.title}
-                    value={item.value}
-                    quantity={item.quantity}
-                    currency={item.currency}
-                    period={item.period}
-                    key={key}
-                  />
-                ))}
+              <div className='bg-gray-50 rounded-sm shadow-sm p-5 grid grid-cols-1 gap-4 lg:grid-cols-3 justify-items-center'>
+                {isMobile ? (
+                  <CarouselPlan array={array} />
+                ) : (
+                  <>
+                    {array.map((item, key) => (
+                      <CardPlan
+                        title={item.title}
+                        value={item.value}
+                        quantity={item.quantity}
+                        currency={item.currency}
+                        period={item.period}
+                        key={key}
+                      />
+                    ))}
+                  </>
+                )}
               </div>
             </div>
           </div>
