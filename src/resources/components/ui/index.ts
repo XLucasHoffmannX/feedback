@@ -16,3 +16,4 @@ export * from './separator';
 export * from './skeleton';
 export { Toaster } from './sonner';
 export * from './switch';
+export * from './popover';

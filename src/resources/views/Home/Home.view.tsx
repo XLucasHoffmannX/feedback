@@ -6,7 +6,7 @@ import { FilterAndSearch } from './components';
 export function Home(): JSX.Element {
   return (
     <ManagementLayout>
-      <div className='h-full w-full flex items-center justify-center overflow-auto'>
+      <div className='h-full w-full flex items-center justify-center overflow-auto mb-18'>
         <div className='md:w-[1200px] h-full p-6 my-4'>
           <FilterAndSearch />
 
