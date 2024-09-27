@@ -5,14 +5,14 @@ import { IPlanProps } from './Plan.type';
 export function Plan(item: IPlanProps): JSX.Element {
   return (
     <div className='w-full flex items-center justify-center mt-6'>
-      <div className='w-full max-w-4xl border rounded-sm '>
+      <div className='w-full max-w-4xl border rounded-sm animate-left'>
         <div className='bg-gray-50 rounded-sm shadow-sm p-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 justify-between'>
           <div>
-            <h1 className='text-xl font-bold'>Plano</h1>
-            <div className='w-full bg-neutral-100 p-4'>
+            <h1 className='text-xl font-bold text-black'>Plano</h1>
+            <div className='w-full bg-neutral-100 p-4 text-black rounded-sm shadow-lg'>
               <h1 className='text-primary text-xl font-bold'>{item.title}</h1>
-              <span className='text-xl'>{item.currency}</span>
-              <span className='text-xl font-extrabold'>{item.value} </span>
+              <span className='text-xl t'>{item.currency}</span>
+              <span className='text-xl font-extrabold ck'>{item.value} </span>
               <span className='text-neutral-400'>{item.period}</span>
             </div>
             <Separator className='mt-4' />

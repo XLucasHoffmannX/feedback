@@ -17,3 +17,4 @@ export * from './skeleton';
 export { Toaster } from './sonner';
 export * from './switch';
 export * from './popover';
+export * from './pagination';

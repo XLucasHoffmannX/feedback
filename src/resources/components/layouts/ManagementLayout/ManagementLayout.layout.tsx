@@ -57,7 +57,9 @@ export function ManagementLayout({
         <HeaderMenuOptions.Right />
       </div>
 
-      {children}
+      <div className='h-full w-full flex items-center justify-center overflow-auto animate-up'>
+        {children}
+      </div>
     </div>
   );
 }

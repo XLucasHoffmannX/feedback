@@ -4,7 +4,7 @@ import { Separator } from '@radix-ui/react-menubar';
 
 export function CardPlan(card: ICardPlanProps): JSX.Element {
   return (
-    <div className='bg-secondary md:flex flex-col border rounded-sm h-[360px] w-[240px] shadow-xl'>
+    <div className='bg-secondary md:flex flex-col border rounded-sm h-[360px] w-[240px] shadow-xl animate-up'>
       <div className='flex justify-between h-[140px]'>
         <div className='p-3 flex flex-col justify-between'>
           <div className='flex flex-col'>

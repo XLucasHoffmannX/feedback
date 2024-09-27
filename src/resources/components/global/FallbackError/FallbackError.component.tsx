@@ -2,9 +2,9 @@ import Lottie from 'react-lottie';
 import { Link } from 'react-router-dom';
 
 import NotFound from '@/shared/assets/animations/animation-404.json';
-import { useAnimationLottie } from '@/shared/hooks/useAnimationLottie';
 
 import { Button } from '../../ui';
+import { useAnimationLottie } from '@/shared/hooks';
 
 export function FallbackError(): JSX.Element {
   const defaultOptions = useAnimationLottie(NotFound, false);
