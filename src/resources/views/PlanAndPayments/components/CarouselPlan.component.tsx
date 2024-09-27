@@ -5,9 +5,9 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/resources/components/ui/carousel';
-import { ICardPlanProps } from './CardPlan.types';
 import { ICarouselPlanProps } from './CarouselPlan.types';
 import { CardPlan } from './CardPlans/CardPlans.component';
+import { ICardPlanProps } from './CardPlans/CardPlan.types';
 
 export function CarouselPlan(item: ICarouselPlanProps): JSX.Element {
   return (

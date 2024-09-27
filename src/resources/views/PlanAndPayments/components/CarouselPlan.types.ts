@@ -1,4 +1,4 @@
-import { ICardPlan } from './CardPlan.types';
+import { ICardPlan } from './CardPlans/CardPlan.types';
 
 export interface ICarouselPlan {
   cardsArray: ICardPlan[];
