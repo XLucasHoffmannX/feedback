@@ -1,10 +1,9 @@
-import { CardPlan } from './components/CardPlans.component';
-import { ICardPlanProps } from './components/CardPlan.types';
+import { CardPlan } from './components/CardPlans/CardPlans.component';
+import { ICardPlanProps } from './components/CardPlans/CardPlan.types';
 import { ManagementLayout } from '@/resources/components/layouts';
-import { Plan } from './components/Plan.component';
-import { CardSubscription } from './components/CardSubscription.component';
 import { CarouselPlan } from './components/CarouselPlan.component';
 import { useIsMobile } from '@/shared/hooks/useIsMobile';
+import { CardSubscription, Plan } from './components';
 
 export function PlanAndPayments(): JSX.Element {
   const isMobile: boolean = useIsMobile({ display: 1024 });
@@ -34,7 +33,7 @@ export function PlanAndPayments(): JSX.Element {
 
   return (
     <ManagementLayout>
-      <div className='h-full w-full flex items-center justify-center overflow-auto'>
+      <div className='h-full w-full flex items-center justify-center overflow-auto '>
         <div className='md:w-[1200px] h-full p-6 my-4'>
           <div className='w-full flex justify-center'>
             <div className='w-full max-w-4xl'>

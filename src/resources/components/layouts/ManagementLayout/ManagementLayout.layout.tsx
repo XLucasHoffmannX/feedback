@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../ui';
 
 import { IManagementLayoutProps } from './ManagementLayout.types';
+import { HeaderMenuOptions } from '../../global';
 
 export function ManagementLayout({
   children
@@ -53,24 +54,7 @@ export function ManagementLayout({
           </ul>
         </div>
 
-        <div className='flex items-center'>
-          <ul className='flex items-center text-md font-bold gap-3'>
-            <li className='md:block hidden'>
-              <Link to='/home'>Suporte</Link>
-            </li>
-            <li className='flex items-center gap-1 cursor-pointer hover:opacity-[80%] hover:scale-110 transition-all duration-200'>
-              <LuUser className='md:hidden block' />
-
-              <Link
-                to='/home'
-                className='max-w-[110px] truncate items-center md:block hidden'
-              >
-                Lucas Hoffmann
-              </Link>
-              <ChevronDownIcon />
-            </li>
-          </ul>
-        </div>
+        <HeaderMenuOptions.Right />
       </div>
 
       {children}

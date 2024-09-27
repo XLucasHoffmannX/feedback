@@ -6,11 +6,11 @@ import { ICardSurveyProps } from './CardSurvey.types';
 
 export function CardSurvey(card: ICardSurveyProps): JSX.Element {
   return (
-    <div className='border rounded-sm h-[180px] flex justify-between w-full shadow-xl'>
+    <div className='border rounded-sm h-[180px] flex justify-between w-full shadow-xl '>
       <div className='p-3 flex flex-col justify-between'>
         <div className='flex flex-col'>
           <h1
-            className='font-bold text-2xl max-w-[158px] truncate'
+            className='font-bold text-2xl max-w-[158px] md:max-w-[800px] truncate'
             title={card.title}
           >
             {card.title}
